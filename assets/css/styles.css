@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&family=Raleway:wght@300;700&family=Nunito:wght@300;400&display=swap');
 
-body{
-   background-color: black;
+*{
+    margin: 0px;
+    padding: 0px;
+}
 
+body{
+    background-color: black;
+    background-image: url("../img/muro.png");
 }
 
 h1 {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
-    text-transform: uppercase;
+    font-size: 5rem;
+    text-shadow: 0px 0px 20px #43c3ff;
     letter-spacing: 2px;
     text-align: center;
     color: rgb(0, 179, 255);
@@ -17,34 +23,68 @@ h1 {
 h2, h3 {
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
+    text-align: center;
     color: white;
 }
 
 h2 strong, .highlight {
     font-weight: 700;
+    text-align: center;
     color: white;
 }
 
 p, label, input, textarea, li {
     font-family: 'Nunito', sans-serif;;
     font-weight: 300;
+    text-align: center;
     color: white;
 }
 
 /*Header */
 
-.seccion-header{
-    border-bottom: 2px solid white;
-    background-image: linear-gradient(90deg,rgba(43, 43, 43, 1) 13%, rgba(107, 107, 107, 1) 41%, rgba(23, 23, 23, 1) 100%);
-    padding: 20px;
+.header-seccion{
+    padding: 5px;
     margin: 0px;
+    background: rgba(38, 38, 65, 0.46);
+    backdrop-filter: blur(6.8px);
+    border-bottom: 1px solid rgb(43, 86, 255);
+    box-shadow: 0 0px 30px 2px rgba(100, 55, 223, 0.338);
+    
 }
+
 .header-div{
     display: flex;
     flex-direction: row;
     gap: 5%;
+    align-items: center;
 }
 
+.header-div ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-div li{
+    text-align: center;
+    align-content: center;
+    padding: 5px;
+    border: 2px solid rgb(42, 184, 255);
+    border-radius: 10px;
+    width: 100%;
+    min-height: 35px;
+    list-style: none;
+    background-image: radial-gradient(circle, rgba(31, 69, 135, 0.196) 52%, rgb(32, 131, 212) 90%);
+    box-shadow: 0px 0px 10px 1px #1ef4ff;
+}
+
+
+li:hover{
+    background-image: radial-gradient(circle, rgba(31, 69, 135, 0.196) 52%, rgb(32, 131, 212) 90%);
+    border-color: #a51eff;
+    box-shadow: 0px 0px 10px 5px #a51eff
+}
 
 .logo{
     display: flex;
@@ -65,49 +105,6 @@ p, label, input, textarea, li {
 }
 
 
-ul{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-}
-
-li{
-    text-align: center;
-    padding: 5px;
-    border: 2px solid;
-    border-radius: 10px;
-    width: 100%;
-    min-height: 35px;
-    list-style: none;
-    box-shadow: 0px 5px 0px 3px #000000;
-}
-#inicio{
-    background-image: radial-gradient(circle, rgba(135, 31, 31, 1) 52%, rgba(212, 32, 32, 1) 90%);
-    border-color: rgb(0,0,0);
-
-}
-
-#categorias{
-    background-image: radial-gradient(circle,rgb(31, 64, 135) 52%, rgb(32, 95, 212) 90%);
-    border-color: rgb(0,0,0);
- 
-}
-#productos{
-    background-image: radial-gradient(circle, rgb(31, 135, 90) 52%, rgb(32, 212, 59) 90%);
-    border-color: rgb(0,0,0);
-
-}
-#contacto{
-    background-image: radial-gradient(circle, rgb(73, 31, 135) 52%, rgb(113, 32, 212)90%);
-    border-color: rgb(0,0,0);
-
-}
-
-li:hover{
-    box-shadow: 0px 5px 5px 3px rgb(0, 51, 128);
-}
-
 a{
     color: white;
     text-decoration: none;
@@ -116,10 +113,43 @@ a{
 
 
 /*Categorias tarjetas*/
+.titulo-sitio{
+    text-align: center;
+}
+
+.categoria-seccion{
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.categoria-seccion div{
+    padding: 10%;
+}
+
+
 
 .categorias-div{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     align-content: center;
+    gap: 30px;
+}
+
+.opcion-div{
+    padding: 30px;
+    background: rgba(63, 63, 209, 0.46);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.8px);
+    border: 1px solid rgba(63, 63, 209, 1);
+}
+
+/*Footer*/
+
+footer{
+    position: relative;
+    bottom: 0px;
 }
