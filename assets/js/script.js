@@ -1,11 +1,14 @@
-    const form = document.getElementById('contact-form');
+    const form = document.getElementById('contacto-form');
 
     // --- Utilidades ---
     function showError(fieldId, message) {
       const errorEl = document.getElementById(fieldId + '-error');
       const inputEl = document.getElementById(fieldId);
-      if (errorEl) errorEl.textContent = message;
-      if (inputEl) inputEl.classList.add('input-error');
+      if (errorEl) {
+        errorEl.textContent = message;
+      }else if(inputEl){ 
+        inputEl.classList.add('input-error');
+      }
     }
 
     function clearError(fieldId) {
@@ -21,7 +24,7 @@
       return regex.test(email);
     }
 
-    // --- Validación en tiempo real (al salir del campo) ---
+    //
     const fields = ['nombre', 'ciudad', 'email', 'asunto', 'descripcion'];
     fields.forEach(function(fieldId) {
       const el = document.getElementById(fieldId);

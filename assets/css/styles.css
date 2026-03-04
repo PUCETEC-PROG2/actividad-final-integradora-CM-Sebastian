@@ -132,8 +132,8 @@ a{
 
 .categoria-seccion div{
     padding: 10%;
-}
 
+}
 
 
 .categorias-div{
@@ -146,11 +146,46 @@ a{
 }
 
 .opcion-div{
-    padding: 30px;
+    width: 200px;
+    padding: 10px;
     background: rgba(63, 63, 209, 0.46);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6.8px);
+    border: 1px solid rgba(63, 63, 209, 1);
+}
+
+
+
+.opcion-a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    gap: 20px;
+    overflow: hidden;
+    
+}
+
+.opcion-a h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(0, 179, 255);
+    text-shadow: 0px 0px 10px #43c3ff;
+    margin-bottom: 4px;
+}
+
+.opcion-a img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
     border: 1px solid rgba(63, 63, 209, 1);
 }
 
@@ -345,4 +380,103 @@ a{
 footer{
     position: relative;
     bottom: 0px;
+}
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+/* Tablet */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    /* Header */
+    .header-div {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-div ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* Categorías */
+    .categoria-seccion div {
+        padding: 5%;
+    }
+
+    .categorias-div {
+        gap: 20px;
+    }
+
+    .opcion-div {
+        width: 160px
+    }
+
+    /* Contacto */
+
+    .info-seccion {
+        padding: 24px 16px;
+    }
+
+    .contacto-seccion {
+        padding: 16px 16px 40px 16px;
+        max-width: 500px;
+    }
+
+    .contacto-ul li {
+        max-width: 100%;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    /* Categorías: una por fila */
+    .categorias-div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .opcion-div {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    /* Contacto */
+    .contacto-seccion {
+        max-width: 320px;
+    }
+
+    .contacto-div {
+        gap: 16px;
+    }
+
+    .contacto-ul li div {
+        padding: 12px 16px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 16px;
+    }
 }
